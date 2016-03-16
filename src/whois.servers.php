@@ -69,6 +69,11 @@ $this->WHOIS_PARAM = array(
 	'jp.whois-servers.net'	=> 'DOM $/e'
 	);
 
+/* If whois Server argument needs any parameters, enter it here */
+
+$this->WHOIS_DOMAIN_PARAM = array(
+	'whois.verisign-grs.com' => '=$',
+	);
 /* TLD's that have special whois servers or that can only be reached via HTTP */
 
 $this->WHOIS_SPECIAL = array(
