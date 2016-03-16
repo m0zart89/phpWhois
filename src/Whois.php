@@ -231,6 +231,10 @@ class Whois extends WhoisClient
                 $this->query['server'] = $this->query['server'] . '?' . str_replace('$', $domain,
                         $this->WHOIS_PARAM[$server]);
             }
+            
+			if (isset($this->WHOIS_DOMAIN_PARAM[$server])){
+				$this->Query['query'] = str_replace('$',$this->Query['query'],$this->WHOIS_DOMAIN_PARAM[$server]);
+			}
 
             $result = $this->getData('', $this->deepWhois);
             $this->checkDns($result);
